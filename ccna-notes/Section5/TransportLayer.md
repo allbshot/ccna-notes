@@ -1,7 +1,6 @@
 # Transport Layer
 
-![alt text](image.png)
-
+- ![alt text](image.png)
 # TCP
 ![alt text](image-1.png)
 
