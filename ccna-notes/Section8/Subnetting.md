@@ -164,6 +164,26 @@ The quick mental shortcut (once you get comfortable):
 
 ![alt text](image-28.png) 
 
+# Point to point subnetting example
+
+![alt text](image-29.png)
+
+# Subnetting Large Networks
+
+![alt text](image-30.png)
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+![alt text](image-33.png)
+
+![alt text](image-34.png)
+
+![alt text](image-35.png)
+
+
+
 
 
 
