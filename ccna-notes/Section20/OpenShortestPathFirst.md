@@ -196,6 +196,28 @@
 
 # OSPF Adjacencies Demo
 
+![alt text](image-87.png)
+
+![alt text](image-88.png)
+
+# OSPF DR and BDR Designated Routers
+
+![alt text](image-89.png)
+
+![alt text](image-90.png)
+
+![alt text](image-91.png)
+
+![alt text](image-92.png)
+
+![alt text](image-93.png)
+
+![alt text](image-94.png)
+
+# OSPF DR and BDR Lab Demo
+
+![alt text](image-95.png)
+
 
 
 
