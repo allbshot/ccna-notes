@@ -1,5 +1,4 @@
-
-# Router With Separate Interfaces
+# DHCP
 
 ![alt text](image.png)
 
@@ -11,9 +10,9 @@
 
 ![alt text](image-4.png)
 
-# Router on a Stick
-
 ![alt text](image-5.png)
+
+# Cisco DHCP Server
 
 ![alt text](image-6.png)
 
@@ -25,7 +24,7 @@
 
 ![alt text](image-10.png)
 
-# Layer 3 Switch
+# External DHCP Server Configuration
 
 ![alt text](image-11.png)
 
@@ -39,17 +38,36 @@
 
 ![alt text](image-16.png)
 
-# Layer 3 Switch Lab Demo
+# Windows, Mac and Linux client IP Settings
 
 ![alt text](image-17.png)
 
+![alt text](image-18.png)
+
+![alt text](image-19.png)
+
+![alt text](image-20.png)
+
+![alt text](image-21.png)
+
+![alt text](image-22.png)
+
+![alt text](image-23.png)
+
+# Cisco DHCP Client
+
+![alt text](image-24.png)
+
+![alt text](image-25.png)
+
+![alt text](image-26.png)
+
+![alt text](image-27.png)
+
+![alt text](image-28.png)
+
+![alt text](image-29.png)
 
 
 
-
-
-
-
-
- 
 
