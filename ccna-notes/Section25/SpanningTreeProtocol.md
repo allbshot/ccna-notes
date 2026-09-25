@@ -213,6 +213,14 @@
 
 ![alt text](image-97.png)
 
+# Portfast, BPDU Guard and Root Guard
+
+![alt text](image-1006.png) ![alt text](image-1007.png) ![alt text](image-1008.png) ![alt text](image-1009.png) ![alt text](image-1010.png) ![alt text](image-1001.png) ![alt text](image-1002.png) ![alt text](image-1003.png) ![alt text](image-1004.png) ![alt text](image-1005.png)
+
+# PortFast and BPDU Guard Lab Demo
+
+![alt text](image-1011.png) ![alt text](image-1012.png) ![alt text](image-1013.png) ![alt text](image-1014.png) ![alt text](image-1015.png) ![alt text](image-1016.png)
+
 # Root Guard Lab Demo
 
 ![alt text](image-98.png)
@@ -242,6 +250,84 @@
 ![alt text](image-110.png)
 
 # BPDU Filter
+
+![alt text](image-128.png)
+
+![alt text](image-129.png)
+
+![alt text](image-130.png)
+
+# Loop Guard 
+
+![alt text](image-131.png)
+
+![alt text](image-132.png)
+
+![alt text](image-133.png)
+
+![alt text](image-134.png)
+
+![alt text](image-135.png)
+
+![alt text](image-136.png)
+
+![alt text](image-137.png)
+
+![alt text](image-138.png)
+
+![alt text](image-139.png)
+
+![alt text](image-140.png)
+
+![alt text](image-141.png)
+
+![alt text](image-142.png)
+
+![alt text](image-143.png)
+
+# PVST+ Versus RPVST+ convergence
+
+![alt text](image-144.png)
+
+![alt text](image-145.png)
+
+![alt text](image-146.png)
+
+![alt text](image-147.png)
+
+![alt text](image-148.png)
+
+![alt text](image-149.png)
+
+![alt text](image-150.png)
+
+![alt text](image-151.png)
+
+![alt text](image-152.png)
+
+# RPVST+ and Hub Interoperability
+
+![alt text](image-153.png)
+
+![alt text](image-154.png)
+
+![alt text](image-155.png)
+
+![alt text](image-156.png)
+
+![alt text](image-157.png)
+
+![alt text](image-158.png)
+
+![alt text](image-159.png)
+
+![alt text](image-160.png)
+
+
+
+
+
+
 
 
 
