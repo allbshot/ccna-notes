@@ -128,6 +128,36 @@
 
 # link Local Addresses Lab Demo
 
+![alt text](image-58.png)
+
+![alt text](image-59.png)
+
+![alt text](image-60.png)
+
+# SLAAC Stateless Address AutoConfiguration
+
+![alt text](image-61.png)
+
+![alt text](image-62.png)
+
+![alt text](image-63.png)
+
+![alt text](image-64.png)
+
+![alt text](image-65.png)
+
+![alt text](image-66.png)
+
+![alt text](image-67.png)
+
+![alt text](image-68.png)
+
+![alt text](image-69.png)
+
+![alt text](image-70.png)
+
+
+
 
 
 
