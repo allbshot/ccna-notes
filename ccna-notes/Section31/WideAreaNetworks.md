@@ -1,4 +1,4 @@
-# Why we need IPv6
+# WAN Overview
 
 ![alt text](image.png)
 
@@ -7,6 +7,8 @@
 ![alt text](image-2.png)
 
 ![alt text](image-3.png)
+
+# VPN Virtual Private Network
 
 ![alt text](image-4.png)
 
@@ -26,9 +28,9 @@
 
 ![alt text](image-12.png)
 
-![alt text](image-13.png)
+# WAN Connectivity Options
 
-# The IPv6 Address Format
+![alt text](image-13.png)
 
 ![alt text](image-14.png)
 
@@ -40,8 +42,6 @@
 
 ![alt text](image-18.png)
 
-# IPv6 Global Unicast Addresses
-
 ![alt text](image-19.png)
 
 ![alt text](image-20.png)
@@ -50,7 +50,9 @@
 
 ![alt text](image-22.png)
 
-![alt text](image-23.png)
+![alt text](image-23.png)   
+
+# Leased Lines
 
 ![alt text](image-24.png)
 
@@ -68,8 +70,6 @@
 
 ![alt text](image-31.png)
 
-# IPv6 Global Unicast Addresses Lab Demo
-
 ![alt text](image-32.png)
 
 ![alt text](image-33.png)
@@ -80,13 +80,13 @@
 
 ![alt text](image-36.png)
 
+# MPLS Multi Protocol Label Switching
+
 ![alt text](image-37.png)
 
 ![alt text](image-38.png)
 
 ![alt text](image-39.png)
-
-# EUI-64 Addresses
 
 ![alt text](image-40.png)
 
@@ -100,13 +100,13 @@
 
 ![alt text](image-45.png)
 
-# Unique Local and Link local Addresses
-
 ![alt text](image-46.png)
 
 ![alt text](image-47.png)
 
 ![alt text](image-48.png)
+
+# PPPoE Point to Point Protocol over Ethernet
 
 ![alt text](image-49.png)
 
@@ -116,61 +116,7 @@
 
 ![alt text](image-52.png)
 
-![alt text](image-53.png)
-
-![alt text](image-54.png)
-
-![alt text](image-55.png)
-
-![alt text](image-56.png)
-
-![alt text](image-57.png)
-
-# link Local Addresses Lab Demo
-
-![alt text](image-58.png)
-
-![alt text](image-59.png)
-
-![alt text](image-60.png)
-
-# SLAAC Stateless Address AutoConfiguration
-
-![alt text](image-61.png)
-
-![alt text](image-62.png)
-
-![alt text](image-63.png)
-
-![alt text](image-64.png)
-
-![alt text](image-65.png)
-
-![alt text](image-66.png)
-
-![alt text](image-67.png)
-
-![alt text](image-68.png)
-
-![alt text](image-69.png)
-
-![alt text](image-70.png)
-
-# IPv6 Static Routes
-
-![alt text](image-45.png)
-
-![alt text](image-46.png)
-
-![alt text](image-47.png)
-
-![alt text](image-48.png)
-
-![alt text](image-49.png)
-
-![alt text](image-51.png)
-
-![alt text](image-52.png)
+# WAN Topology Options
 
 ![alt text](image-53.png)
 
@@ -188,9 +134,6 @@
 
 ![alt text](image-60.png)
 
-# IPv6 Static Route Lab Demo
-
-![alt text](image-71.png)
 
 
 
@@ -198,8 +141,4 @@
 
 
 
-
-
-
-  
 
