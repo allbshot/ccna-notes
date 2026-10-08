@@ -50,5 +50,137 @@
 
 # Line Level Security Lab Demo
 
+![alt text](image-28.png)
+
+![alt text](image-29.png)
+
+![alt text](image-30.png)
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+![alt text](image-33.png)
+
+![alt text](image-34.png)
+
+# Usernames and Privilege Levels
+
+![alt text](image-35.png)
+
+![alt text](image-36.png)
+
+![alt text](image-37.png)
+
+![alt text](image-38.png)
+
+![alt text](image-39.png)
+
+![alt text](image-40.png)
+
+![alt text](image-41.png)
+
+![alt text](image-42.png)
+
+![alt text](image-43.png)
+
+![alt text](image-44.png)
+
+![alt text](image-45.png)
+
+![alt text](image-46.png)
+
+![alt text](image-47.png)
+
+![alt text](image-48.png)
+
+![alt text](image-49.png)
+
+![alt text](image-50.png)
+
+# SSH Secure Shell
+
+![alt text](image-51.png)
+
+![alt text](image-52.png)
+
+![alt text](image-53.png)
+
+![alt text](image-54.png)
+
+# SSH Secure Shell Lab Demo
+
+![alt text](image-55.png)
+
+![alt text](image-56.png)
+
+![alt text](image-57.png)
+
+![alt text](image-58.png)
+
+# AAA Authentication,Authorization and Accounting
+
+![alt text](image-59.png)
+
+![alt text](image-60.png)
+
+![alt text](image-61.png)
+
+![alt text](image-62.png)
+
+![alt text](image-63.png)
+
+![alt text](image-64.png)
+
+![alt text](image-65.png)
+
+![alt text](image-66.png)
+
+![alt text](image-67.png)
+
+![alt text](image-68.png)
+
+![alt text](image-69.png)
+
+![alt text](image-70.png)
+
+![alt text](image-71.png)
+
+![alt text](image-72.png)
+
+![alt text](image-73.png)
+
+![alt text](image-74.png)
+
+![alt text](image-75.png)
+
+![alt text](image-76.png)
+
+# AAA Configuration
+
+![alt text](image-77.png)
+
+![alt text](image-78.png)
+
+![alt text](image-79.png)
+
+![alt text](image-80.png)
+
+# Global Security Best Practices
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
