@@ -140,6 +140,123 @@
 
 ![alt text](image-63.png)
 
+# Ansible Lab Demo
+
+![alt text](image-71.png)
+
+![alt text](image-72.png)
+
+![alt text](image-73.png)
+
+![alt text](image-74.png)
+
+![alt text](image-75.png)
+
+# SDN Software Defined Networking
+
+![alt text](image-64.png)
+
+![alt text](image-65.png)
+
+![alt text](image-66.png)
+
+![alt text](image-67.png)
+
+![alt text](image-68.png)
+
+![alt text](image-69.png)
+
+![alt text](image-70.png)
+
+# Software Defined Architecture - Catalyst Center (formerly DNA Center)
+
+![alt text](image-71.png)
+
+![alt text](image-72.png)
+
+![alt text](image-73.png)
+
+![alt text](image-74.png)
+
+![alt text](image-75.png)
+
+![alt text](image-76.png)
+
+![alt text](image-77.png)
+
+![alt text](image-78.png)
+
+![alt text](image-79.png)
+
+![alt text](image-80.png)
+
+![alt text](image-81.png)
+
+![alt text](image-82.png)
+
+![alt text](image-83.png)
+
+![alt text](image-84.png)
+
+![alt text](image-85.png)
+
+![alt text](image-86.png)
+
+![alt text](image-87.png)
+
+![alt text](image-88.png)
+
+![alt text](image-89.png)
+
+![alt text](image-90.png)
+
+![alt text](image-91.png)
+
+![alt text](image-92.png)
+
+![alt text](image-93.png)
+
+![alt text](image-94.png)
+
+![alt text](image-95.png)
+
+# Software Defined Architecture - SD-Access
+
+![alt text](image-96.png)
+
+![alt text](image-97.png)
+
+![alt text](image-98.png)
+
+![alt text](image-99.png)
+
+![alt text](image-100.png)
+
+![alt text](image-101.png)
+
+![alt text](image-102.png)
+
+![alt text](image-103.png)
+
+![alt text](image-104.png)
+
+![alt text](image-105.png)
+
+# Software Defined Architecture - SD-WAN
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
