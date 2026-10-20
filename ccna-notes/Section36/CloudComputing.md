@@ -156,6 +156,20 @@
 
 ![alt text](image-70.png)
 
+# Ansible Lab Demo
+
+![alt text](image-71.png)
+
+![alt text](image-72.png)
+
+![alt text](image-73.png)
+
+![alt text](image-74.png)
+
+![alt text](image-75.png)
+
+
+
 
 
 
