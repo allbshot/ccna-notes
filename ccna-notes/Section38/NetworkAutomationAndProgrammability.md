@@ -244,6 +244,58 @@
 
 # Software Defined Architecture - SD-WAN
 
+![alt text](image-106.png)
+
+![alt text](image-107.png)
+
+![alt text](image-108.png)
+
+![alt text](image-109.png)
+
+![alt text](image-110.png)
+
+![alt text](image-111.png)
+
+![alt text](image-112.png)
+
+![alt text](image-113.png)
+
+![alt text](image-114.png)
+
+![alt text](image-115.png)
+
+![alt text](image-116.png)
+
+![alt text](image-117.png)
+
+![alt text](image-118.png)
+
+![alt text](image-119.png)
+
+# Cisco Meraki
+
+![alt text](image-120.png)
+
+![alt text](image-121.png)
+
+![alt text](image-122.png)
+
+![alt text](image-123.png)
+
+![alt text](image-124.png)
+
+![alt text](image-125.png)
+
+# Further Learning Resources
+
+![alt text](image-126.png)
+
+
+
+
+
+
+
 
 
 
