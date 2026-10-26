@@ -119,6 +119,12 @@ HSRP elects one router as a standy router  and only one virtual internet protoco
 
 - ipv6 route prefix/length {interface | next-hop} [administrative-distance], where prefix/length is the destination network, interface is the output interface on the local router.
 
+![alt text](image-27.png)
+
+- always a manually configured router ID will take precedence over any form of automatically calculated router ID on OSPF router. If the OSPF router ID of a router is not manually configured, the router ID will be determined first by the highest internet protocol address among loopback interfaces and then by the highest IP address among physical interfaces if no loopback has been configured. 
+
+
+
 
 
 ## IP Services (10%)
