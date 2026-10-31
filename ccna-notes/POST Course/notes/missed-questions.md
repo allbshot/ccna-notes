@@ -119,6 +119,28 @@ HSRP elects one router as a standy router  and only one virtual internet protoco
 
 - ipv6 route prefix/length {interface | next-hop} [administrative-distance], where prefix/length is the destination network, interface is the output interface on the local router.
 
+![alt text](image-27.png)
+
+- always a manually configured router ID will take precedence over any form of automatically calculated router ID on OSPF router. If the OSPF router ID of a router is not manually configured, the router ID will be determined first by the highest internet protocol address among loopback interfaces and then by the highest IP address among physical interfaces if no loopback has been configured. 
+
+![alt text](image-28.png)
+
+- i guessed but the only ones i have heard of are broadcast and point-to-point so i got it correct. 
+
+![alt text](image-29.png)
+
+- The first number within the brackets indicates AD, The second number within the brackets indicates the metric. The second number indicates the cost metric.OSPF will choose path with the lowest cost and AD.
+
+![alt text](image-30.png)
+
+- Only the active router will use the Hot Standby Router Protocol virtual internet protocoladdress and will respond to address resolutiion protocol ARP request with the HSRP virtual media access control address MAC. 
+
+![alt text](image-31.png)
+
+![alt text](image-32.png)
+
+![alt text](image-33.png)
+
 
 
 ## IP Services (10%)
