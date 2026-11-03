@@ -35,6 +35,7 @@ line vty 0 4
 end
 copy running-config startup-config
 ```
+![alt text](image.png)
 
 > Switches use `line vty 0 15` instead of `0 4`.
 
@@ -65,6 +66,10 @@ copy running-config startup-config
 ### ISP
 
 ![ISP config](images/isp-config.png)
+# Interfaces
+![alt text](image.png)
+
+
 
 | Interface | Address | Connects to |
 | --- | --- | --- |
@@ -92,6 +97,8 @@ copy running-config startup-config
 | `interface loopback0` | |
 | `no shutdown` | |
 | `clock rate 64000` | |
+# Interfaces
+![alt text](image-1.png)
 
 **Notes:**
 
@@ -105,6 +112,10 @@ copy running-config startup-config
 | --- | --- | --- |
 | Lo0 | 4.4.4.4/32 | OSPF router ID (Phase 4) |
 | S0/0/0 | 10.0.0.10/30 | EDGE (DTE end) |
+
+#  interfaces 
+
+![alt text](image-2.png)
 
 **Notes:**
 
@@ -131,17 +142,23 @@ ip default-gateway 10.10.99.1
 
 ![ASW1 config](images/asw1-config.png)
 
+![alt text](image-5.png)
+
 **Notes:**
 
 ### ASW2 (10.10.99.12)
 
 ![ASW2 config](images/asw2-config.png)
 
+![alt text](image-6.png)
+
 **Notes:**
 
 ### BR-SW (10.20.98.11, VLAN 98, gw 10.20.98.1)
 
 ![BR-SW config](images/br-sw-config.png)
+
+![alt text](image-7.png)
 
 **Notes:**
 
@@ -150,6 +167,10 @@ ip default-gateway 10.10.99.1
 ![DSW1 config](images/dsw1-config.png)
 
 ![DSW2 config](images/dsw2-config.png)
+
+![alt text](image-3.png)
+
+![alt text](image-4.png)
 
 **Notes:**
 
@@ -164,7 +185,13 @@ ip default-gateway 10.10.99.1
 
 ![WEB-SRV IP config](images/web-srv-ip.png)
 
+![alt text](image-8.png)
+
 ![SRV1 IP config](images/srv1-ip.png)
+
+![alt text](image-9.png)
+
+
 
 ---
 
