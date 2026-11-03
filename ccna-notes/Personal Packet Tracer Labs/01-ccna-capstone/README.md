@@ -6,7 +6,7 @@ After finishing the CCNA course, I wanted to prove to myself that I could design
 
 ## Progress
 
-- [ ] Phase 1: Base config and device hardening
+- [x] Phase 1: Base config and device hardening
 - [ ] Phase 2: VLANs, trunks, EtherChannel, Rapid PVST+
 - [ ] Phase 3: Inter-VLAN routing (SVIs + HSRP, router-on-a-stick)
 - [ ] Phase 4: Multi-area OSPF and default route
