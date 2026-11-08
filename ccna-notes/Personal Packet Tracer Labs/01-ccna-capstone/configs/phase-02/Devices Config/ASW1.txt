@@ -1,0 +1,247 @@
+ASW1>enable
+Password: 
+ASW1#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+ASW1#show running-config
+Building configuration...
+
+Current configuration : 3482 bytes
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname ASW1
+!
+enable secret 5 $1$mERr$Pq3/lr0agnISq0fxb9TUZ0
+!
+!
+!
+ip ssh version 2
+no ip domain-lookup
+ip domain-name lab.local
+!
+username admin secret 5 $1$mERr$mAFCdR3tRjfHxTewc8Oq5.
+!
+vtp mode transparent
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+vlan 10
+ name STAFF
+!
+vlan 20
+ name SALES
+!
+vlan 30
+ name GUEST
+!
+vlan 40
+ name SERVERS
+!
+vlan 99
+ name MGMT
+!
+vlan 666
+ name BLACKHOLE
+!
+vlan 999
+ name NATIVE
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/2
+ switchport access vlan 20
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/3
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/4
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/5
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/6
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/7
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/8
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/9
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/10
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/11
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/12
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/13
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/14
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/15
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/16
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/17
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/18
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/19
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/20
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/21
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/22
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/23
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/24
+ switchport access vlan 666
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet0/1
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan99
+ ip address 10.10.99.11 255.255.255.0
+!
+ip default-gateway 10.10.99.1
+!
+banner motd ^C Authorized access only ^C
+!
+!
+!
+line con 0
+ logging synchronous
+ login local
+!
+line vty 0 4
+ login local
+ transport input ssh
+line vty 5 15
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+
+
+
+
+
+# spanning tree 
+
+
+ASW1# show spanning-tree vlan 10
+VLAN0010
+  Spanning tree enabled protocol rstp
+  Root ID    Priority    24586
+             Address     0002.4ABB.AAB0
+             Cost        4
+             Port        25(GigabitEthernet0/1)
+             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+
+  Bridge ID  Priority    32778  (priority 32768 sys-id-ext 10)
+             Address     0060.4710.10EC
+             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec
+             Aging Time  20
+
+Interface        Role Sts Cost      Prio.Nbr Type
+---------------- ---- --- --------- -------- --------------------------------
+Fa0/1            Desg FWD 19        128.1    P2p
+Gi0/1            Root FWD 4         128.25   P2p
+Gi0/2            Altn BLK 4         128.26   P2p
+

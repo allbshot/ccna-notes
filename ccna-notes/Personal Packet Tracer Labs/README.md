@@ -7,7 +7,7 @@ After finishing the CCNA course, I wanted to prove to myself that I could design
 ## Progress
 
 - [x] Phase 1: Base config and device hardening
-- [ ] Phase 2: VLANs, trunks, EtherChannel, Rapid PVST+
+- [x] Phase 2: VLANs, trunks, EtherChannel, Rapid PVST+
 - [ ] Phase 3: Inter-VLAN routing (SVIs + HSRP, router-on-a-stick)
 - [ ] Phase 4: Multi-area OSPF and default route
 - [ ] Phase 5: DHCP, DHCP relay, DNS
@@ -20,34 +20,36 @@ After finishing the CCNA course, I wanted to prove to myself that I could design
 
 ## Topology
 
+Link labels read from the first device to the second (for example, `G0/1 .1 – G1/0/1 .2` on EDGE–DSW1 means EDGE G0/1 is .1 and DSW1 G1/0/1 is .2).
+
 ```mermaid
 graph TD
-  WEB["WEB-SRV<br/>8.8.8.8"] ---|8.8.8.0/24| ISP["ISP<br/>fake Internet"]
-  ISP ---|203.0.113.0/30| EDGE
+  WEB["WEB-SRV<br/>8.8.8.8/24 · gw 8.8.8.1"] ---|"Fa0 .8 – G0/1 .1<br/>8.8.8.0/24"| ISP["ISP · 2911<br/>fake Internet"]
+  ISP ---|"G0/0 .1 – G0/0 .2<br/>203.0.113.0/30"| EDGE
   subgraph A0["OSPF Area 0 (HQ)"]
-    EDGE["EDGE<br/>ABR · NAT · 2911"]
-    DSW1["DSW1<br/>3650 · active 10/30/99"]
-    DSW2["DSW2<br/>3650 · active 20/40"]
+    EDGE["EDGE · 2911<br/>ABR · NAT<br/>Lo0 1.1.1.1/32"]
+    DSW1["DSW1 · 3650<br/>Lo0 2.2.2.2/32<br/>SVIs .2 · active 10/30/99"]
+    DSW2["DSW2 · 3650<br/>Lo0 3.3.3.3/32<br/>SVIs .3 · active 20/40"]
   end
   subgraph A1["OSPF Area 1 (Branch)"]
-    BR1["BR1<br/>2911 · ROAS"]
-    BRSW["BR-SW<br/>2960"]
+    BR1["BR1 · 2911 · ROAS<br/>Lo0 4.4.4.4/32<br/>G0/0.50 10.20.50.1/24<br/>G0/0.98 10.20.98.1/24"]
+    BRSW["BR-SW · 2960<br/>VLAN 98: 10.20.98.11"]
   end
-  EDGE ---|10.0.0.0/30| DSW1
-  EDGE ---|10.0.0.4/30| DSW2
-  EDGE -.-|Serial 10.0.0.8/30| BR1
-  DSW1 ===|Po1 LACP| DSW2
-  DSW1 --- ASW1["ASW1<br/>2960"]
-  DSW1 --- ASW2["ASW2<br/>2960"]
-  DSW2 --- ASW1
-  DSW2 --- ASW2
-  ASW1 --- STAFF["PC-STAFF<br/>VLAN 10"]
-  ASW1 --- SALES["PC-SALES<br/>VLAN 20"]
-  ASW2 --- GUEST["PC-GUEST<br/>VLAN 30"]
-  ASW2 --- SRV1["SRV1<br/>VLAN 40"]
-  ASW2 --- ADMIN["ADMIN-PC<br/>VLAN 99"]
-  BR1 --- BRSW
-  BRSW --- PCBR["PC-BR<br/>VLAN 50"]
+  EDGE ---|"G0/1 .1 – G1/0/1 .2<br/>10.0.0.0/30"| DSW1
+  EDGE ---|"G0/2 .5 – G1/0/1 .6<br/>10.0.0.4/30"| DSW2
+  EDGE -.-|"S0/0/0 .9 DCE – S0/0/0 .10<br/>10.0.0.8/30"| BR1
+  DSW1 ===|"Po1 LACP<br/>G1/0/23-24 – G1/0/23-24"| DSW2
+  DSW1 ---|"G1/0/2 – G0/1<br/>trunk"| ASW1["ASW1 · 2960<br/>VLAN 99: 10.10.99.11"]
+  DSW1 ---|"G1/0/3 – G0/1<br/>trunk"| ASW2["ASW2 · 2960<br/>VLAN 99: 10.10.99.12"]
+  DSW2 ---|"G1/0/2 – G0/2<br/>trunk"| ASW1
+  DSW2 ---|"G1/0/3 – G0/2<br/>trunk"| ASW2
+  ASW1 ---|"Fa0/1 – Fa0"| STAFF["PC-STAFF<br/>VLAN 10 · DHCP<br/>10.10.10.100-199"]
+  ASW1 ---|"Fa0/2 – Fa0"| SALES["PC-SALES<br/>VLAN 20 · DHCP<br/>10.10.20.100-199"]
+  ASW2 ---|"Fa0/1 – Fa0"| GUEST["PC-GUEST<br/>VLAN 30 · DHCP<br/>10.10.30.100-199"]
+  ASW2 ---|"Fa0/2 – Fa0"| SRV1["SRV1<br/>VLAN 40<br/>10.10.40.10 · gw .1"]
+  ASW2 ---|"Fa0/24 – Fa0"| ADMIN["ADMIN-PC<br/>VLAN 99<br/>10.10.99.50 · gw .1"]
+  BR1 ---|"G0/0 – G0/1<br/>trunk"| BRSW
+  BRSW ---|"Fa0/1 – Fa0"| PCBR["PC-BR<br/>VLAN 50 · DHCP<br/>10.20.50.11-254"]
 ```
 
 <!-- Replace or supplement with a screenshot of the real canvas: ![Topology](images/topology.png) -->
@@ -267,26 +269,26 @@ vlan 999
 spanning-tree mode rapid-pvst
 ```
 
-LACP EtherChannel between DSW1 and DSW2. The 3650 supports ISL, so it needs `encapsulation dot1q` before it will trunk:
+LACP EtherChannel between DSW1 and DSW2. The 3650 only supports 802.1Q, so there's no `switchport trunk encapsulation` command; I just set the mode. I put the full trunk settings on the member ports before `channel-group` so the members can't mismatch:
 
 ```
 interface range g1/0/23 - 24
- switchport trunk encapsulation dot1q
  switchport mode trunk
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport nonegotiate
  channel-group 1 mode active
 interface port-channel 1
- switchport trunk encapsulation dot1q
  switchport mode trunk
  switchport trunk native vlan 999
  switchport trunk allowed vlan 10,20,30,40,99
  switchport nonegotiate
 ```
 
-Trunk downlinks use the same settings on DSW G1/0/2–3 and ASW G0/1–2. The 2960s don't take the encapsulation line.
+Trunk downlinks use the same settings on DSW G1/0/2–3 and ASW G0/1–2:
 
 ```
 interface range g1/0/2 - 3
- switchport trunk encapsulation dot1q
  switchport mode trunk
  switchport trunk native vlan 999
  switchport trunk allowed vlan 10,20,30,40,99
@@ -304,7 +306,7 @@ spanning-tree vlan 20,40 root primary
 spanning-tree vlan 10,30,99 root secondary
 ```
 
-Access ports (ASW1 shown). Every unused port is shut down and parked in VLAN 666:
+Access ports (ASW1 shown). Every unused port is shut down and parked in VLAN 666, including DSW G1/0/4–22 and G1/1/1–4:
 
 ```
 interface fa0/1
@@ -323,7 +325,7 @@ interface range fa0/3 - 24
  shutdown
 ```
 
-BR-SW gets VLANs 50, 98 and 999, a G0/1 trunk (native 999, allowed 50 and 98, nonegotiate), and Fa0/1 as an access port in VLAN 50.
+BR-SW also runs VTP transparent and Rapid PVST+, with VLANs 50, 98, 666 and 999, a G0/1 trunk (native 999, allowed 50 and 98, nonegotiate), Fa0/1 as an access port in VLAN 50, and every other port shut down in VLAN 666.
 
 **How I verified it:** `show etherchannel summary` (Po1 SU, members P) · `show interfaces trunk` · `show spanning-tree vlan 10` · `show vlan brief`
 
@@ -611,7 +613,7 @@ For each drill, I introduce the fault, predict the symptom, then find it using o
 
 - The 3650 needs the AC-POWER-SUPPLY module to boot.
 - Modules only insert with the device powered off.
-- The 3650 needs `switchport trunk encapsulation dot1q` before it will trunk.
+- The 3650 and 2960 only support 802.1Q, so `switchport trunk encapsulation dot1q` is rejected. That command only exists on ISL-capable switches like the 3560.
 - STP, OSPF and HSRP take time to converge. Fast Forward Time helps.
 - 169.254.x.x on a PC means DHCP failed. Check helper-address, snooping trust ports and option 82.
 - The serial DCE end needs `clock rate`.
